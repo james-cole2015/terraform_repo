@@ -6,7 +6,3 @@ terraform {
     }
   }
 }
-
-#test 2
-#this is also a test
-#is this finally done?
