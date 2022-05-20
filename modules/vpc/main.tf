@@ -5,7 +5,7 @@ resource "aws_vpc" "Tatooine"{
   tags = var.tags
 }
 
-resource "aws_subnet" "Han's Public Subnet " {
+resource "aws_subnet" "Han_Public_Subnet " {
   vpc_id = aws_vpc.Tatooine.id
 
   tags =  var.tags
@@ -13,7 +13,7 @@ resource "aws_subnet" "Han's Public Subnet " {
   cidr_block = var.public_sn[0]
 }
 
-resource "aws_subnet" "Han's Private Subnet" {
+resource "aws_subnet" "Hans_Private_Subnet" {
   vpc_id = aws_vpc.Tatooine.id
 
   tags =  var.tags

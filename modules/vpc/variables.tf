@@ -4,7 +4,7 @@ VPC VARIABLES
 #############
 */
 variable cidr_range {
-    default = "10.100.100.0/16"
+    default = "10.100.0.0/16"
     type = string
 }
 
