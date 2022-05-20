@@ -1,18 +1,22 @@
-module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+resource "aws_vpc" "Tatooine"{
+  cidr_block = var.cidr_range
+  instance_tenancy = "default"
 
-  name = "my-vpc"
-  cidr = "10.0.0.0/16"
+  tags = var.tags
+}
 
-  azs             = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
-  private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+resource "aws_subnet" "Han's Public Subnet " {
+  vpc_id = aws_vpc.Tatooine.id
 
-  enable_nat_gateway = true
-  enable_vpn_gateway = true
+  tags =  var.tags
 
-  tags = {
-    Terraform = "true"
-    Environment = "dev"
-  }
+  cidr_block = var.public_sn[0]
+}
+
+resource "aws_subnet" "Han's Private Subnet" {
+  vpc_id = aws_vpc.Tatooine.id
+
+  tags =  var.tags
+
+  cidr_block = var.private_sn[0]
 }
