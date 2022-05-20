@@ -1,5 +1,5 @@
 resource "aws_subnet" "Hans_Public_Subnet" {
-  vpc_id = aws_vpc.Tatooine.id
+  vpc_id = module.vpc.Tatooine.id
 
   tags =  var.tags
 
@@ -7,7 +7,7 @@ resource "aws_subnet" "Hans_Public_Subnet" {
 }
 
 resource "aws_subnet" "Hans_Private_Subnet" {
-  vpc_id = aws_vpc.Tatooine.id
+  vpc_id = module.Tatooine.id
 
   tags =  var.tags
 
