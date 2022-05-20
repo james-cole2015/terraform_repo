@@ -15,7 +15,7 @@ module "vpc" {
 
     name = var.ec2_name
     ami = var.ubuntu_ami
-    subnet_id = module.aws_subnet[1].id
+    subnet_id = module.vpc.aws_subnet[1].id
     instance_type = "t2.micro"
 
     tags = var.tags
