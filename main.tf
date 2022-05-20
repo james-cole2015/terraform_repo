@@ -19,7 +19,7 @@ module "subnet" {
 
     name = var.ec2_name
     ami = var.ubuntu_ami
-    subnet_id = module.aws_subnet.Hans_Public_Subnet.id
+    subnet_id = module.subnet.Hans_Public_Subnet.id
     instance_type = "t2.micro"
 
     tags = var.tags
