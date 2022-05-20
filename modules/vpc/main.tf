@@ -5,7 +5,7 @@ resource "aws_vpc" "Tatooine"{
   tags = var.tags
 }
 
-resource "aws_subnet" "Han_Public_Subnet " {
+resource "aws_subnet" "Hans_Public_Subnet" {
   vpc_id = aws_vpc.Tatooine.id
 
   tags =  var.tags
