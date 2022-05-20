@@ -46,3 +46,8 @@ EC2 VARIABLES
 #############
 */
 
+variable "ec2_name" {
+    type = string
+    default = "X-Wing Tracking Program"
+}
+
