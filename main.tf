@@ -8,9 +8,9 @@ module "vpc" {
   source = "./modules/vpc/"
 }
 
-module "subnet" {
+/*module "subnet" {
   source = "./modules/subnet"
-}
+}*/
 
 
   module "ec2-instance_example_complete" {
