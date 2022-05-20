@@ -40,3 +40,9 @@ variable "azs" {
     type = list(string)
 }
 
+/*
+#############
+EC2 VARIABLES
+#############
+*/
+
