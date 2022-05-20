@@ -51,3 +51,7 @@ variable "ec2_name" {
     default = "X-Wing Targeting Program"
 }
 
+variable "ubuntu_ami" {
+    type = string
+    default = "ami-01c9c1d6ccb3a4a11"
+}
