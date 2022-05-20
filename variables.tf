@@ -36,7 +36,7 @@ variable "vpc_name" {
 }
 
 variable "azs" {
-    default = ['us-east-1b','us-west-1d',us-west-2c]
+    default = ["us-east-1b","us-west-1d","us-west-2c"]
     type = list(string)
 }
 
