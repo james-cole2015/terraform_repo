@@ -5,7 +5,19 @@ provider "aws" {
 
 
 module "vpc" {
-  source = "./modules/vpc/"
+  source = "terraform-aws-modules/vpc/aws"
+
+  name = var.vpc_name
+  cidr = var.cidr_range
+
+  azs             = var.azs
+  private_subnets = var.private_sn[0]
+  public_subnets  = var.public_sn[0]
+
+  enable_nat_gateway = true
+  enable_vpn_gateway = true
+
+  tags = var.tags
 }
 
 /*module "subnet" {
