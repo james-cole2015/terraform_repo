@@ -31,7 +31,7 @@ variable "tags" {
 }
 
 variable "vpc_name" {
-    default = "Luke's VPC"
+    default = "Lukes_VPC"
     type = string
 }
 
@@ -48,7 +48,7 @@ EC2 VARIABLES
 
 variable "ec2_name" {
     type = string
-    default = "X-Wing Targeting Program"
+    default = "X-Wing_Targeting_Program"
 }
 
 variable "ubuntu_ami" {
