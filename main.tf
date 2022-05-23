@@ -11,8 +11,8 @@ module "vpc" {
   cidr = var.cidr_range
 
   azs             = var.azs
-  private_subnets = var.private_sn[0]
-  public_subnets  = var.public_sn[0]
+  #private_subnets = var.private_sn[0]
+  #public_subnets  = var.public_sn[0]
 
   enable_nat_gateway = true
   enable_vpn_gateway = true

@@ -55,3 +55,7 @@ variable "ubuntu_ami" {
     type = string
     default = "ami-01c9c1d6ccb3a4a11"
 }
+
+variable "vpc_id" {
+  type = string
+}
