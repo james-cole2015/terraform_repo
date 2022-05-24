@@ -4,12 +4,12 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-ebd02392"
+  ami                    = "ami-0b0ea68c435eb488d"
   instance_type          = "t2.micro"
   key_name               = "user1"
   monitoring             = true
   #vpc_security_group_ids = ["sg-12345678"]
-  subnet_id              = var.public_sn0
+  subnet_id              = module.networking.vpc.public_subnets[0]
 
   tags = {
     Terraform   = "true"
