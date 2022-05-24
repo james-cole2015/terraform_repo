@@ -5,5 +5,5 @@ module "networking" {
 module "ec2" {
     source = "./modules/ec2"
     vpc = module.networking.vpc.id
-    subnet = module.networking.vpc.public_subnets[0]
+    subnet_id = module.networking.vpc.public_subnets[0]
 }
