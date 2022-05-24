@@ -1,3 +1,3 @@
 module "networking" {
-    source = ./modules/networking
+    source = "./modules/networking"
 }
