@@ -4,4 +4,5 @@ module "networking" {
 
 module "ec2" {
     source = "./modules/ec2"
+    vpc = module.networking.vpc
 }
