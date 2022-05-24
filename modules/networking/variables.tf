@@ -12,3 +12,8 @@ variable "public_sn" {
   type = list(string)
   default = [ "10.100.32.0","10.100.42.0" ]
 }
+
+variable "vpc_name" {
+type = string
+    default = "JasperMainNet"
+}
