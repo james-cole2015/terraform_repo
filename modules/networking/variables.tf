@@ -14,11 +14,6 @@ variable "public_sn" {
 }
 
 variable "vpc_name" {
-  type = string
-  default = "JasperMainNet"
-}
-
-variable "test" {
-  default = "test"
-  type = string
+type = string
+    default = "JasperMainNet"
 }
