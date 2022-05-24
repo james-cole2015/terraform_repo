@@ -11,4 +11,6 @@ module "vpc" {
   create_database_subnet_group     = true
   enable_nat_gateway               = true
   single_nat_gateway               = true
+
+  
 }
