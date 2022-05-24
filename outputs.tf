@@ -1,3 +1,3 @@
 output "vpc_id_test" {
-    value = module.networking.vpc.id 
+    value = module.networking.vpc.vpc_id 
 }
