@@ -5,12 +5,12 @@ variable cidr_block {
 
 variable "private_sn" {
     type = list(string)
-    default = [ "10.100.0.0","10.100.1.0" ]
+    default = [ "10.100.0.0/24","10.100.1.0/24" ]
 }
 
 variable "public_sn" {
   type = list(string)
-  default = [ "10.100.32.0","10.100.42.0" ]
+  default = [ "10.100.32.0/24","10.100.42.0/24" ]
 }
 
 variable "vpc_name" {
