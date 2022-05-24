@@ -4,5 +4,5 @@ variable "vpc" {
 
 variable "public_sn0" {
   type = string
-  default = module.networking.vpc.public_subnets[0]
+  default = "test"
 }
