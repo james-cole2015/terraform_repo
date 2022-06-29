@@ -4,5 +4,5 @@ variable "region" {
 
 variable "subnet_id" {
   type = any
-  default = module.networking.vpc.public_subnets[0]
+  default = ["$module.networking.vpc.public_subnets[0]"]
 }
