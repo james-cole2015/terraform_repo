@@ -12,4 +12,7 @@ module "ec2" {
 module "key_gen" {
     source = "./modules/aws_keys"
 }
-        
+
+provisioner "local-exec" {
+  command = "echo '{tls_private_key.this.private_key_pem}' > ./myKey.pem"
+}

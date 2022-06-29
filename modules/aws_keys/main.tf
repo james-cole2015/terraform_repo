@@ -9,6 +9,6 @@ module "key_pair" {
   public_key = tls_private_key.this.public_key_openssh
 }
 
-provisioner "local-exec" {
- command = "echo '{tls_private_key.this.private_key_pem}' > ./myKey.pem"
-}
+#provisioner "local-exec" {
+# command = "echo '{tls_private_key.this.private_key_pem}' > ./myKey.pem"
+#}
