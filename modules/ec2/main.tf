@@ -10,6 +10,7 @@ module "ec2_instance" {
   monitoring             = true
   #vpc_security_group_ids = ["sg-12345678"]
   subnet_id              = var.subnet_id
+  user_data = file("ws_bootstrap.sh")
 
   tags = {
     Terraform   = "true"
