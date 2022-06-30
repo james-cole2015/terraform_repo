@@ -1,14 +1,25 @@
-resource "tls_private_key" "this" {
+resource "tls_private_key" "rsa" {
   algorithm = "RSA"
+  rsa_bits = 4096
 }
+/*
+resource "aws_key_pair" "tf_key" {
+  key_name = "tf_key" 
+  public_key = tls_private_key.rsa.public_key_openssh
 
+  
+}
+*/
 module "key_pair" {
   source = "terraform-aws-modules/key-pair/aws"
 
-  key_name   = "deployer-one"
-  public_key = tls_private_key.this.public_key_openssh
+  key_name = "tf_key"
+  public_key = tls_private_key.rsa.public_key_openssh
 }
 
-#provisioner "local-exec" {
-# command = "echo '{tls_private_key.this.private_key_pem}' > ./myKey.pem"
-#}
+resource "local_file" "created_keypair_to_local" {
+  content = tls_private_key.rsa.private_key_pem
+  filename = "tfkey.pem"
+}
+
+

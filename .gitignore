@@ -1,0 +1,6 @@
+.tfstate
+.terraform
+.terraform.lock.hcl
+.tfstate.backup
+.git
+.DS_STORE

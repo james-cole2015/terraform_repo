@@ -10,5 +10,5 @@ variable "subnet_id" {
 
 variable "key_name" {
   type = any
-  default = ["$module.aws_keys.key_pair.key_name"]
+  default = ["$module.key_gen.key_pair_key_name"]
 }
