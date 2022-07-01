@@ -4,8 +4,8 @@ module "ec2_instance" {
 
   name = "JacksFlamingRevenge"
 
-  ami                    = "ami-0b0ea68c435eb488d"
-  instance_type          = "t2.micro"
+  ami                    = "ami-0439517b5e436bdab"
+  instance_type          = "t2.small"
   key_name               = "tf_key"
   monitoring             = true
   #vpc_security_group_ids = ["sg-12345678"]
