@@ -1,6 +1,13 @@
-.tfstate
-.terraform
-.terraform.lock.hcl
-.tfstate.backup
-.git
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+.vscode
+
+*.pem
 .DS_STORE
