@@ -36,7 +36,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "JasperSecurityGroup"
+    Name = "Jaspers_SecurityGroup"
   }
 
 }
