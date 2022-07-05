@@ -34,7 +34,7 @@ resource "aws_security_group" "allow_ssh" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   tags = {
     Name = "JasperSecurityGroup"
   }
@@ -42,16 +42,16 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 resource "aws_security_group" "allow_http" {
-  name = "allow_http"
+  name        = "allow_http"
   description = "allow http traffic"
-  vpc_id = module.vpc.vpc_id
+  vpc_id      = module.vpc.vpc_id
 
   ingress = {
     description = "http from internet"
-    from_port = 80
-    to_port = 80
-    protocol = tcp
-    cidr_block = ["0.0.0.0/0"]
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_block  = ["0.0.0.0/0"]
   }
 
   egress {
@@ -60,7 +60,7 @@ resource "aws_security_group" "allow_http" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   tags = {
     Name = "JasperSecurityGroup"
   }

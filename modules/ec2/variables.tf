@@ -14,6 +14,6 @@ variable "key_name" {
 }
 
 variable "security_group" {
-  type    = any
+  type = any
   #default = ["$module.networking.aws_security_group.allow_ssh.id"]
 }
