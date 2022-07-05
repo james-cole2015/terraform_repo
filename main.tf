@@ -7,7 +7,7 @@ module "ec2" {
   vpc       = module.networking.vpc.vpc_id
   subnet_id = module.networking.vpc.public_subnets[0]
   # key_name  = module.key_gen.key_pair_key_name
-  # security_group =module.networking.aws_security_group.allow_ssh.id
+  security_group =module.networking.allow_ssh.id
 }
 
 module "key_gen" {
