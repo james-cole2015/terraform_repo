@@ -1,5 +1,11 @@
+### Repo Goals: 
+- [x] Deploy VPC with private and public subnet
+- [x] Deploy EC2 instance in public subnet
+- [x] Generate SSH key to access EC2 instance
+- [x] Create security groups to provide admin access 
+- [x] Create security groups to provide access to internet
+- [x] Develop user data script to bootstrap webserver
 
-This was a playground for terraform development. The initial project is a basic terraform AWS deployment. This deployment will consist of 1 EC2 instance with a VPC and two subnets. A ssh key will be generated to gain access. Three security groups will be created that allow ssh, http, and https. 
 
 
 ![final architecture diagram](https://github.com/james-cole2015/terraform_repo/blob/main/final_architecture.jpg)[^1]
