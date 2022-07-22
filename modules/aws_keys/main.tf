@@ -12,7 +12,7 @@ resource "aws_key_pair" "tf_key" {
 */
 module "key_pair" {
   source = "terraform-aws-modules/key-pair/aws"
-
+  version = "1.0.1"
   key_name   = "tf_key"
   public_key = tls_private_key.rsa.public_key_openssh
 }
